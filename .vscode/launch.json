@@ -1,0 +1,90 @@
+{
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "preLaunchTask": "build lyrics_main",
+      "name": "Debug Lyrics Main",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "ASAN_OPTIONS": "abort_on_error=1:detect_leaks=0",
+      },
+      "program": "${workspaceFolder}/lyrics_main",
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "preLaunchTask": "build lyrics_tests",
+      "name": "Debug CleanToken",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "ASAN_OPTIONS": "abort_on_error=1:detect_leaks=0",
+      },
+      "program": "${workspaceFolder}/lyrics_tests",
+      "args": [
+        "--gtest_color=yes",
+        "--gtest_filter=CleanToken*",
+      ],
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "preLaunchTask": "build lyrics_tests",
+      "name": "Debug GatherTokens",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "ASAN_OPTIONS": "abort_on_error=1:detect_leaks=0",
+      },
+      "program": "${workspaceFolder}/lyrics_tests",
+      "args": [
+        "--gtest_color=yes",
+        "--gtest_filter=GatherTokens*",
+      ],
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "preLaunchTask": "build lyrics_tests",
+      "name": "Debug BuildIndices",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "ASAN_OPTIONS": "abort_on_error=1:detect_leaks=0",
+      },
+      "program": "${workspaceFolder}/lyrics_tests",
+      "args": [
+        "--gtest_color=yes",
+        "--gtest_filter=BuildIndices*",
+      ],
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "preLaunchTask": "build lyrics_tests",
+      "name": "Debug FindQueryMatches",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "ASAN_OPTIONS": "abort_on_error=1:detect_leaks=0",
+      },
+      "program": "${workspaceFolder}/lyrics_tests",
+      "args": [
+        "--gtest_color=yes",
+        "--gtest_filter=FindQueryMatches*",
+      ],
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "preLaunchTask": "build lyrics_tests",
+      "name": "Debug SearchEngine",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "ASAN_OPTIONS": "abort_on_error=1:detect_leaks=0",
+      },
+      "program": "${workspaceFolder}/lyrics_tests",
+      "args": [
+        "--gtest_color=yes",
+        "--gtest_filter=SearchEngine*",
+      ],
+    },
+  ],
+}

@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "build lyrics_tests",
+      "command": "make lyrics_tests",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "close": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true,
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "shell",
+      "label": "build lyrics_main",
+      "command": "make lyrics_main",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "close": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true,
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
